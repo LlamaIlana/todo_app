@@ -13,8 +13,7 @@
     "react-dom": "^18.3.1",
     "react-redux": "^9.2.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "homepage": "https://LlamaIlana.github.io/to-do-list"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -44,5 +43,6 @@
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
-  }
+  },
+  "homepage": "https://LlamaIlana.github.io/to-do-list"
 }
