@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Provider } from "react-redux";
+import { store } from "./Store/Store.js";
+import ToDoList from "./Components /toDoList.js";
+import Counter from "./Components /Counter.js";
+import Info from "./Components /info.js";
+import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import InfoIcon from "./Components /img/info.png";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+  const [modalShow, setModalShow] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="body">
+      <Provider store={store}>
+        <Counter />
+        <div className="App">
+          <Button
+            className="info-btn, info-btn"
+            variant="primary"
+            onClick={() => setModalShow(true)}>
+            <img
+              src={InfoIcon}
+              alt="info"
+              style={{ width: "3rem", height: "3rem" }}
+            />
+          </Button>
+          <div className="body-container">
+            <Info show={modalShow} onHide={() => setModalShow(false)} />
+            <h1>TO-DO APP</h1>
+            <ToDoList />
+          </div>
+        </div>
+      </Provider>
     </div>
   );
 }
