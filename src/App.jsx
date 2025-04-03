@@ -1,9 +1,9 @@
 import React from "react";
 import { Provider } from "react-redux";
-import { store } from "./Store/Store.js";
-import ToDoList from "./Components /toDoList.js";
-import Counter from "./Components /Counter.js";
-import Info from "./Components /info.js";
+import { store } from "./Store/Store.jsx";
+import ToDoList from "./Components /toDoList.jsx";
+import Counter from "./Components /Counter.jsx";
+import Info from "./Components /info.jsx";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import InfoIcon from "./Components /img/info.png";
